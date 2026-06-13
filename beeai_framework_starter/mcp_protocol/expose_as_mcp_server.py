@@ -37,7 +37,7 @@ def mcp_server() -> None:
 
 
 async def mcp_client() -> None:
-    [agent_tool] = await MCPTool.from_client(streamablehttp_client("http://127.0.0.1:7777/mcp"))  # type: ignore
+    [agent_tool] = await MCPTool.from_client(streamablehttp_client("http://127.0.0.1:7777/mcp"))
     prompt = "What's the current weather in Berlin?"
     print(f"User: {prompt}")
     response = await agent_tool.run({"input": prompt})
